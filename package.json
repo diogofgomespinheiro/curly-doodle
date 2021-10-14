@@ -1,0 +1,8 @@
+{
+  "name": "curly-doodle",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:diogofgomespinheiro/curly-doodle.git",
+  "author": "Diogo Pinheiro <diogo.fgomes.pinheiro@gmail.com>",
+  "license": "MIT"
+}
