@@ -1,0 +1,15 @@
+.github
+.storybook
+.vscode
+coverage
+!dist
+.eslintignore
+.eslintrc.json
+.prettierrc
+.stylelintrc
+tsconfig.json
+jsconfig.json
+rollup.config.*.js
+test-config.js
+yarn.lock
+*.log
