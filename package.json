@@ -1,7 +1,10 @@
 {
   "name": "curly-doodle",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "browser": "dist/index.cjs.js",
+  "types": "dist/src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/diogofgomespinheiro/curly-doodle"
@@ -20,7 +23,15 @@
   "bugs": {
     "url": "https://github.com/diogofgomespinheiro/curly-doodle/issues"
   },
+  "scripts": {
+    "build:dev": "rollup -c rollup/rollup.config.dev.js -m",
+    "build:cjs": "rollup -c rollup/rollup.config.cjs.js",
+    "build:es": "rollup -c rollup/rollup.config.es.js",
+    "build": "rimraf dist/* && npm run build:dev && npm run build:cjs && npm run build:es"
+  },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.5",
     "@types/node": "^16.11.0",
     "@types/react": "^17.0.30",
     "@types/react-dom": "^17.0.9",
@@ -37,6 +48,12 @@
     "prettier": "^2.4.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.58.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "rollup-plugin-visualizer": "^5.5.2",
     "styled-components": "^5.3.1",
     "stylelint": "^13.13.1",
     "stylelint-config-recommended": "^5.0.0",
