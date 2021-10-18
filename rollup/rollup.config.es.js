@@ -6,7 +6,7 @@ import config, { plugins } from './rollup.config.common';
 export default Object.assign(config, {
   output: [
     {
-      file: pkg.main,
+      file: pkg.module,
       format: 'es',
       exports: 'named',
       sourcemap: true

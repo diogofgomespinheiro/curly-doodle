@@ -24,10 +24,11 @@
     "url": "https://github.com/diogofgomespinheiro/curly-doodle/issues"
   },
   "scripts": {
+    "build:declarations": "tsc --project tsconfig.json --declaration --emitDeclarationOnly && tscpaths -p tsconfig.json -s ./src -o ./dist",
     "build:dev": "rollup -c rollup/rollup.config.dev.js -m",
     "build:cjs": "rollup -c rollup/rollup.config.cjs.js",
     "build:es": "rollup -c rollup/rollup.config.es.js",
-    "build": "rimraf dist/* && npm run build:dev && npm run build:cjs && npm run build:es",
+    "build": "rimraf dist/* && npm run build:dev && npm run build:cjs && npm run build:es && npm run build:declarations",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "make:component": "plop --plopfile ./.plop/component.js"
@@ -74,6 +75,7 @@
     "stylelint-config-recommended": "^5.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.10.0",
+    "tscpaths": "^0.0.9",
     "typescript": "^4.4.4"
   },
   "peerDependencies": {

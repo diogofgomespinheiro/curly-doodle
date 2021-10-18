@@ -2,8 +2,6 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./src",
-    "declaration": true,
-    "declarationDir": "dist",
     "esModuleInterop": true,
     "jsx": "react",
     "lib": ["es2020", "dom"],
@@ -12,9 +10,16 @@
     "outDir": "./dist",
     "removeComments": true,
     "resolveJsonModule": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "strict": true,
-    "target": "es5"
+    "target": "es5",
+    "paths": {
+      "@atoms/*": ["components/atoms/*"],
+      "@molecules/*": ["components/molecules/*"],
+      "@organisms/*": ["components/organisms/*"],
+      "@layouts/*": ["components/layouts/*"],
+      "@themes/*": ["styles/themes/*"]
+    }
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist", "src/**/*.stories.tsx", "src/**/*.spec.tsx"]
