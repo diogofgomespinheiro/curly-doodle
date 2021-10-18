@@ -20,6 +20,7 @@ module.exports = {
     '@storybook/addon-a11y',
     '@storybook/addon-knobs',
     'storybook-addon-outline',
+    'storybook-addon-styled-component-theme/dist/preset'
   ],
   webpackFinal: async config => {
     config.resolve.alias = {
