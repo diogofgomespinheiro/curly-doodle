@@ -15,7 +15,7 @@
     "Library",
     "Rollup",
     "Typescript",
-    "Styled Components",
+    "Stitches",
     "Storybook"
   ],
   "author": "Diogo Pinheiro <diogo.fgomes.pinheiro@gmail.com>",
@@ -37,6 +37,7 @@
     "@babel/core": "^7.15.8",
     "@rollup/plugin-commonjs": "^21.0.0",
     "@rollup/plugin-node-resolve": "^13.0.5",
+    "@stitches/react": "^1.2.5",
     "@storybook/addon-a11y": "^6.3.12",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
@@ -47,7 +48,6 @@
     "@types/node": "^16.11.0",
     "@types/react": "^17.0.30",
     "@types/react-dom": "^17.0.9",
-    "@types/styled-components": "^5.1.15",
     "@types/styled-system": "^5.1.13",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
@@ -70,7 +70,6 @@
     "rollup-plugin-typescript2": "^0.30.0",
     "rollup-plugin-visualizer": "^5.5.2",
     "storybook-addon-outline": "^1.4.1",
-    "styled-components": "^5.3.1",
     "stylelint": "^13.13.1",
     "stylelint-config-recommended": "^5.0.0",
     "stylelint-config-styled-components": "^0.1.1",
@@ -80,9 +79,6 @@
   },
   "peerDependencies": {
     "react": ">= 17.0.2",
-    "styled-components": ">= 5.3.1"
-  },
-  "dependencies": {
-    "styled-system": "^5.1.5"
+    "@stitches/react": "> 1.2.5"
   }
 }
