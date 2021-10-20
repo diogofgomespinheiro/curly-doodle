@@ -19,12 +19,16 @@ module.exports = {
     },
     '@storybook/addon-a11y',
     '@storybook/addon-knobs',
-    'storybook-addon-outline',
+    'storybook-addon-outline'
   ],
   webpackFinal: async config => {
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@themes': resolve('../src/styles/themes')
+      '@themes': resolve('../src/styles/themes'),
+      '@atoms/*': resolve('../src/components/atoms'),
+      '@molecules/*': resolve('../src/components/molecules'),
+      '@organisms/*': resolve('../src/components/organisms'),
+      '@layouts/*': resolve('../src/components/layouts')
     };
 
     config.resolve.extensions.push('.ts', '.tsx');
