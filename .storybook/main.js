@@ -21,6 +21,15 @@ module.exports = {
     '@storybook/addon-knobs',
     'storybook-addon-outline'
   ],
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      compilerOptions: {
+        allowSyntheticDefaultImports: false,
+        esModuleInterop: false
+      }
+    }
+  },
   webpackFinal: async config => {
     config.resolve.alias = {
       ...config.resolve.alias,
